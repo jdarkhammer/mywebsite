@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags, title, and CSS links -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form id="registerForm" action="register.php" method="POST">
+            <!-- Add id="registerForm" to the form element -->
+            <!-- Register form fields -->
+            <h1>Register</h1>
+            <!-- Input fields -->
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" placeholder="Email" required>
+                <i class='bx bx-mail-send'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <!-- Hidden input field to identify registration form submission -->
+            <input type="hidden" name="registerForm" value="1">
+            <!-- Register button -->
+            <button type="submit" class="btn">Register</button>
+            <!-- Login link -->
+            <div class="register-link">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- JavaScript for handling navigation -->
+    <script>
+        document.querySelector('.register-link a').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            window.location.href = 'login.html'; // Redirect to login page
+        });
+    </script>
+</body>
+</html>
